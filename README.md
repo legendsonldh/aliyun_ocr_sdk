@@ -18,12 +18,14 @@ the aliyun OCR text recognition api with HTTP by uploading the image's url in we
 This package needs user have the aliyun **accessKeyId** and **accessKeySecret**.
 Your should login in the website of the aliyun and follow this approach:
 
-> User's image -> AccessKey Management 
+> User's image 
+
+> AccessKey Management 
 
 ## Usage
 
 ```dart
-  var aliYunSdk = aliYunOcRClient();
+  var aliYunSdk = aliyunOcrClient();
   aliYunSdk.accessKeyId = "YouraccessKeyId";
   aliYunSdk.accessKeySecret = "YouraccessKeySecret";
   aliYunSdk.imgUrl ="https://img.alicdn.com/tfs/TB1Wo7eXAvoK1RjSZFDXXXY3pXa-2512-3509.jpg";
@@ -40,3 +42,4 @@ Your should login in the website of the aliyun and follow this approach:
 ## Additional information
 
 Some issues can be submitted into [My Homepage](https://github.com/legendsonldh/aliyun_ocr_sdk)
+This package has been published in pub.dev website, here is the link [aliyun_ocr_sdk 1.0.0](https://pub.dev/packages/aliyun_ocr_sdk)

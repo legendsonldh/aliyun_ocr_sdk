@@ -4,7 +4,7 @@ import 'package:test/test.dart';
 void main() {
   group('A group of tests', () {
 
-    var aliYunSdk = aliYunOcRClient();
+    var aliYunSdk = aliyunOcrClient();
 
     setUp(() {
       // Additional setup goes here.

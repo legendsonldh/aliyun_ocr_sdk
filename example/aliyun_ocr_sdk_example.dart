@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 
 void main() async {
   // init the class
-  var aliYunSdk = aliYunOcRClient();
+  var aliYunSdk = aliyunOcrClient();
   aliYunSdk.accessKeyId = "YouraccessKeyId";
   aliYunSdk.accessKeySecret = "YouraccessKeySecret";
   aliYunSdk.imgUrl =
