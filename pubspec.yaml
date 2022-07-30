@@ -1,0 +1,17 @@
+name: aliyun_ocr_sdk
+description: A sdk tool for developers use functions of aliyun OCR text recognition
+             in the dart language for flutter framework.
+version: 1.0.0
+homepage:
+
+environment:
+  sdk: '>=2.17.5 <3.0.0'
+
+dev_dependencies:
+  lints: ^2.0.0
+  test: ^1.16.0
+
+  dio: ^4.0.6
+  uuid: ^3.0.6
+  intl: ^0.17.0
+  crypto: ^3.0.2
