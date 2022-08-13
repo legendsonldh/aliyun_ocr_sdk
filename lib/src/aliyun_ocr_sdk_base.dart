@@ -4,9 +4,57 @@ import 'package:uuid/uuid.dart';
 import 'dart:convert';
 import 'package:crypto/crypto.dart';
 
-/// Checks if you are awesome. Spoiler: you are.
+/// The Old Method of aliyunOcr
+class aliYunOcrClientOld {
+  /// Your Aliyun Account appCode
+  String appCode = "";
 
-class aliyunOcrClient {
+  /// imgUrl
+  String imgUrl = "";
+
+  /// img binary
+  var imgBinary;
+
+  /// Http's Headers
+  Map<String, String> headers = {};
+
+  /// Method
+  Map dict = {};
+  
+  /// Body
+  var body;
+
+  /// aliyun_ocr_serve
+  String baseUrl = "";
+
+  /// init the client
+  aliYunOcrClientOld() {
+    baseUrl = "https://ocrapi-advanced.taobao.com/ocrservice/advanced";
+
+  }
+
+  /// create Headers
+  void generateHeaders(){
+    headers['Authorization'] = 'APPCODE ' + appCode;
+    headers['Content-Type'] = 'application/json; charset=UTF-8';
+  }
+
+  /// create body WithUrl
+  void generateBodyWithUrl(){
+    dict['url'] = imgUrl;
+    body = jsonEncode(dict);
+  }
+
+  /// create body WithImg
+  void generateBodyWithImg(){
+    dict['img'] = base64Encode(imgBinary.toList());
+    body = jsonEncode(dict);
+  }
+
+}
+
+/// The New Method of aliyunOcr
+class aliYunOcrClientNew {
   /// Your Aliyun Account accessKey
   String accessKeyId = "";
 
@@ -50,7 +98,7 @@ class aliyunOcrClient {
   };
 
   /// init the Class
-  aliYunOcRClient() {
+  aliYunOcRClientNew() {
     baseUrl = 'http://ocr-api.cn-hangzhou.aliyuncs.com/';
     var now = DateTime.now().toUtc();
     timeStamp =
